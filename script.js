@@ -1,10 +1,10 @@
-const buttons = document.querySelectorAll("button");
-const result = document.querySelector("#result")
+    const buttons = document.querySelectorAll("button");
+    const result = document.querySelector(".result")
 
-buttons.forEach((button) => {
+   buttons.forEach((button) => {
     button.addEventListener("click", function(e){
-        let value = e.target.dataset.value
-        result.innerHTML = value;
-        console.log(value);
-    });
-});
+        e.preventDefault();
+        let value = e.target.dataset.value;
+        result.value += value;
+    })
+})
